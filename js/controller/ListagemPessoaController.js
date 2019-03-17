@@ -5,9 +5,9 @@ class ListagemPessoaController {
         
         PessoaRestClient.listar().then((arrayPessoas)=> {
             arrayPessoas.forEach((pessoa) => {
-                let tdNome = this._criarTd(pessoa.name);
-                let tdTelefone = this._criarTd(pessoa.telefone);
-                let tdEmail = this._criarTd(pessoa.email);
+                let tdNome = HtmlUtils.criarTd(pessoa.name);
+                let tdTelefone = HtmlUtils.criarTd(pessoa.telefone);
+                let tdEmail = HtmlUtils.criarTd(pessoa.email);
 
                 let tr = document.createElement("tr");
                 tr.appendChild(tdNome);
@@ -21,11 +21,4 @@ class ListagemPessoaController {
             });
         });
     }
-
-    _criarTd(conteudo){
-        let td = document.createElement("td");
-        td.textContent = conteudo;
-        return td;
-    }
-    
 }
