@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <form id="formInscricao" onsubmit="inscricaoController.realizarInscricao(event)">
+            <label for="evento">Evento: </label>
+            <select id= "selectEventos">
+                <option value="">Selecione o Evento</option>
+            </select>
+
+            <select id= "selectPessoas">
+                <option value="">Selecione a Pessoa</option>
+            </select>
+            
+            <button type="submit">Inscrever</button>
+        </form>
+
+        <script src="../js/model/Evento.js"></script>
+        <script src="../js/model/Pessoa.js"></script>
+        <script src="../js/model/Inscricao.js"></script>
+        <script src="../js/controller/InscricaoController.js"></script>
+        <script>
+            let inscricaoController = new InscricaoController();
+            inscricaoController.preencheSelects();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <table id="tablePessoas">
+            <thead>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>E-mail</th>
+            </thead>
+        </table>
+
+        <script src="../js/config/properties.js"></script>
+        <script src="../js/rest-client/RestClient.js"></script>
+        <script src="../js/model/Pessoa.js"></script>
+        <script src="../js/rest-client/PessoaRestClient.js"></script>
+        <script src="../js/controller/ListagemPessoaController.js"></script>
+        <script>
+            let listagemPessoaController = new ListagemPessoaController();
+            listagemPessoaController.preencherTableUsuarios();
+        </script>
+    </body>
+</html>
