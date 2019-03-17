@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <table id="tableEventos">
+            <thead>
+                <th>Titulo</th>
+                <th>Inicio</th>
+                <th>Fim</th>
+            </thead>
+        </table>
+
+        <script src="../js/config/properties.js"></script>
+        <script src="../js/utils/HtmlUtils.js"></script>
+        <script src="../js/rest-client/RestClient.js"></script>
+        <script src="../js/model/Evento.js"></script>
+        <script src="../js/rest-client/EventoRestClient.js"></script>
+        <script src="../js/controller/ListagemEventoController.js"></script>
+        <script>
+            let listagemEventoController = new ListagemEventoController();
+            listagemEventoController.preencherTableEventos();
+        </script>
+    </body>
+</html>

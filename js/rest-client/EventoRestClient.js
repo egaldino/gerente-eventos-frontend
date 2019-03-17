@@ -12,4 +12,8 @@ class EventoRestClient {
         return RestClient.post('evento', evento);
     }
 
+    static addInscricao(inscricao){
+         return RestClient.post('inscricoes', inscricao);
+    }
+
 }
